@@ -3,7 +3,9 @@ Tocar .mp3 pelo python
 '''
 
 import pygame
-pygame.init()
-pygame.mixer.music.load('ex021.mp3')
+pygame.mixer.init()
+#pygame.init()
+pygame.mixer.music.load('./ex021.wav')
 pygame.mixer.music.play()
-pygame.event.wait()
+while(pygame.mixer.music.get_busy()): pass
+#pygame.event.wait()
